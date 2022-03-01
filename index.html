@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <main>
+      <section class="dancing__section">
+        <div class="dancing-wrapper">
+          <img src="./images/dancing.gif" alt="Dancing Gif" />
+        </div>
+      </section>
+      <section class="input__section">
+        <p>Want to hear something cool? <span class="emoji">👇</span></p>
+        <form>
+          <input class="name" type="text" placeholder="Name" />
+        </form>
+        <button class="click" type="button" name="button">Click Me!</button>
+      </section>
+      <section class="songs hide">
+        <h1>Select a song</h1>
+        <div class="songs__wrapper">
+          <div class="song" data-name="dean">
+            <span class="song-name">Waves</span>
+            <span class="artist">Dean Lewis</span>
+            <span class="download"
+              ><a href="./music/Waves - Dean Lewis-320k.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="tones">
+            <span class="song-name">Dance Monkey</span>
+            <span class="artist">Tones & I</span>
+            <span class="download"
+              ><a href="./music/Tones-and-I-Dance-Monkey.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="ckay">
+            <span class="song-name">Love Nwantinti</span>
+            <span class="artist">C-Kay</span>
+            <span
+              ><a
+                href="./music/CKay-Love-Nwantinti-[TrendyBeatz.com].mp3"
+                download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="billie">
+            <span class="song-name">Ocean Eyes</span>
+            <span class="artist">Billie Eillish </span>
+            <span
+              ><a
+                href="./music/Billie-Eilish-Ocean-Eyes-via-Naijafinix.com_.mp3"
+                download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="wizkid">
+            <span class="song-name">Essence</span>
+            <span class="artist">Wizkid</span>
+            <span class="download"
+              ><a href="./music/Wizkid_ft_Tems_-_Essence.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="chicco">
+            <span class="song-name">Nkao Tempella</span>
+            <span class="artist">Chicco</span>
+            <span
+              ><a
+                href="./music/Chicco_ft_Mellow_Sleazy_-_Nkao_Tempela.mp3"
+                download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="nial">
+            <span class="song-name">Mirrors</span>
+            <span class="artist">Nial Horan</span>
+            <span class="download"
+              ><a href="./music/niall_horan-mirrors.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="omahlay">
+            <span class="song-name">You</span>
+            <span class="artist">Omah Lay</span>
+            <span class="download"
+              ><a href="./music/Omah_Lay_You_9jaflaver.com_.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="davido">
+            <span class="song-name">Holy Ground</span>
+            <span class="artist">Davido</span>
+            <span class="download"
+              ><a href="./music/Davido-Holy-Ground-ft.-Nicki-Minaj.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="heize">
+            <span class="song-name">Round and Round</span>
+            <span class="artist">Heize Han</span>
+            <span
+              ><a
+                href="./music/Heize Han Soo Ji - Round And Round (OST Goblin Part.14).mp3"
+                download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="sia">
+            <span class="song-name">Hellium</span>
+            <span class="artist">Sia</span>
+            <span class="download"
+              ><a href="./music/Sia-Helium-via-Naijafinix.com_.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+          <div class="song" data-name="duncan">
+            <span class="song-name">Arcade</span>
+            <span class="artist">Duncan Lawrence</span>
+            <span
+              ><a
+                href="./music/Duncan-Laurence-Arcade-ft.-FLETCHER_OpraDre.com_.mp3"
+                download
+                >Click to download</a
+              ></span
+            >
+            <span class="pause hide"><i class="fas fa-pause"></i></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <audio data-name="dean" src="./music/Waves - Dean Lewis-320k.mp3"></audio>
+    <audio data-name="tones" src="./music/Tones-and-I-Dance-Monkey.mp3"></audio>
+    <audio
+      data-name="billie"
+      src="./music/Billie-Eilish-Ocean-Eyes-via-Naijafinix.com_.mp3"
+    ></audio>
+    <audio
+      data-name="wizkid"
+      src="./music/Wizkid_ft_Tems_-_Essence.mp3"
+    ></audio>
+    <audio
+      data-name="chicco"
+      src="./music/Chicco_ft_Mellow_Sleazy_-_Nkao_Tempela.mp3"
+    ></audio>
+    <audio data-name="nial" src="./music/niall_horan-mirrors.mp3"></audio>
+    <audio
+      data-name="davido"
+      src="./music/Davido-Holy-Ground-ft.-Nicki-Minaj.mp3"
+    ></audio>
+    <audio
+      data-name="heize"
+      src="./music/Heize Han Soo Ji - Round And Round (OST Goblin Part.14).mp3"
+    ></audio>
+    <audio
+      data-name="sia"
+      src="./music/Sia-Helium-via-Naijafinix.com_.mp3"
+    ></audio>
+    <audio
+      data-name="duncan"
+      src="./music/Duncan-Laurence-Arcade-ft.-FLETCHER_OpraDre.com_.mp3"
+    ></audio>
+    <audio
+      data-name="ckay"
+      src="./music/CKay-Love-Nwantinti-[TrendyBeatz.com].mp3"
+    ></audio>
+    <audio
+      data-name="omahlay"
+      src="./music/Omah_Lay_You_9jaflaver.com_.mp3"
+    ></audio>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
