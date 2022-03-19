@@ -108,14 +108,14 @@ songs.forEach((song) => {
     currentSong.classList.add("playing");
 
     //Pass bg change to setInterval to repeat it at interval and animate
-    let count = 0;
+    let counter = 0;
 
     const handleInterval = setInterval(() => {
-      body.style.background = "url(" + imageArr[count] + ")";
+      body.style.background = "url(" + imageArr[counter] + ")";
       body.style.backgroundSize = "cover";
       body.style.backgroundPosition = "center";
       body.style.backgroundRepeat = "no-repeat";
-      count == imageArr.length - 1 ? (count = 0) : count++;
+      counter == imageArr.length - 1 ? (counter = 0) : counter++;
     }, 4000);
 
     //Only display the target's pause if play doesn't have the class show
