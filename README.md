@@ -1,5 +1,5 @@
 # Mini Music Player
-This is a music app where you can listen and download a few songs. It has play, pause, mute, unmute, and audio currentime features. 
+This is a music app where you can listen and download a few songs. It has play, pause, mute, unmute, and audio current time features. 
 
 
 
