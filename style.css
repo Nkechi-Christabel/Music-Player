@@ -7,10 +7,8 @@
 body {
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
-  align-items: center;
   text-align: center;
   background: linear-gradient(217deg, #16222a, rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(9, 28, 72, 0.92), rgba(0, 255, 0, 0) 70.71%),
@@ -28,11 +26,11 @@ body {
 
 .dancing-wrapper img {
   width: 100%;
-  height: auto;
 }
 
 .input__section {
   position: relative;
+  top: 30%;
   z-index: 1;
   text-align: center;
 }
@@ -80,6 +78,7 @@ button.click {
 
 .songs {
   animation: floatInTop 1s ease-in;
+  height: auto;
 }
 
 .songs h1 {
@@ -96,10 +95,10 @@ button.click {
 .songs__wrapper {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 31.25rem));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 30rem));
+  gap: 1.5rem;
   padding: 1rem;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .song {
@@ -197,6 +196,46 @@ button.click {
 
 .show {
   display: inline-block;
+}
+
+/* Pagination */
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  align-content: end;
+  justify-content: center;
+  width: calc(100% - 2rem);
+  padding: 1rem 0;
+}
+
+.pagination-number,
+.pagination-button {
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: #dcdcdc;
+  border: none;
+  margin: 0.25rem 0.25rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.2rem;
+}
+
+.pagination-number:hover,
+.pagination-button:not(.disabled):hover {
+  background: #fff;
+  color: #696969;
+}
+
+.pagination-number.active {
+  color: #fff;
+  background: #20aab2;
+}
+
+.pagination-number.disabled,
+.pagination-button.disabled {
+  color: #696969;
 }
 
 @keyframes pulse {

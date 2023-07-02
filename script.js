@@ -136,14 +136,13 @@ songs.forEach((song) => {
     //Play when song is clicked
     play.forEach((play) => {
       play.addEventListener("click", () => {
-
-      //Prevents all songs from playing simultaneously when clicked  
-      if(currentSong.contains(play)) {
-        audio.play();
-      }
-    
+        //Prevents all songs from playing simultaneously when clicked
+        if (currentSong.contains(play)) {
+          audio.play();
+        }
 
         //Resumes bg change when song is played
+        let count;
         setInterval(() => {
           body.style.background = "url(" + imageArr[count] + ")";
           body.style.backgroundSize = "cover";
@@ -243,7 +242,7 @@ function timeUpdate(audio, target) {
     if (target.contains(cur)) {
       cur.innerHTML = `${curMins} : ${curSecs}`;
     } else {
-      cur.innerHTML = 00 + ":" + 00;
+      cur.innerHTML = "0o0" + ":" + "0o0";
     }
   });
 }
@@ -257,11 +256,108 @@ function audioDuration(audio, target) {
     if (target.contains(dur)) {
       dur.innerHTML = `${durMins} : ${durSecs}`;
     } else {
-      dur.innerHTML = 00 + ":" + 00;
+      dur.innerHTML = "0o0" + ":" + "0o0";
     }
   });
 }
 
-body.addEventListener("click", (e) => {
-  console.log(e.target);
+//PAGINATION
+
+const paginationNumbers = document.getElementById("pagination-numbers");
+const paginatedList = document.getElementsByClassName("paginated-list");
+const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
+
+const paginationLimit = 10;
+const pageCount = Math.ceil(songs.length / paginationLimit);
+let currentPage = 1;
+
+const disableButton = (button) => {
+  button.classList.add("disabled");
+  button.setAttribute("disabled", true);
+};
+
+const enableButton = (button) => {
+  button.classList.remove("disabled");
+  button.removeAttribute("disabled");
+};
+
+const handlePageButtonsStatus = () => {
+  if (currentPage === 1) {
+    disableButton(prevButton);
+  } else {
+    enableButton(prevButton);
+  }
+
+  if (pageCount === currentPage) {
+    disableButton(nextButton);
+  } else {
+    enableButton(nextButton);
+  }
+};
+
+const handleActivePageNumber = () => {
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    button.classList.remove("active");
+    const pageIndex = Number(button.getAttribute("page-index"));
+    if (pageIndex == currentPage) {
+      button.classList.add("active");
+    }
+  });
+};
+
+const appendPageNumber = (index) => {
+  const pageNumber = document.createElement("button");
+  pageNumber.className = "pagination-number";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page " + index);
+
+  paginationNumbers.appendChild(pageNumber);
+};
+
+const getPaginationNumbers = () => {
+  for (let i = 1; i <= pageCount; i++) {
+    appendPageNumber(i);
+  }
+};
+
+const setCurrentPage = (pageNum) => {
+  currentPage = pageNum;
+
+  handleActivePageNumber();
+  handlePageButtonsStatus();
+
+  const prevRange = (pageNum - 1) * paginationLimit;
+  const currRange = pageNum * paginationLimit;
+
+  songs.forEach((item, index) => {
+    item.classList.add("hide");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("hide");
+    }
+  });
+};
+
+window.addEventListener("load", () => {
+  getPaginationNumbers();
+  setCurrentPage(1);
+
+  prevButton.addEventListener("click", () => {
+    setCurrentPage(currentPage - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    setCurrentPage(currentPage + 1);
+  });
+
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    const pageIndex = Number(button.getAttribute("page-index"));
+
+    if (pageIndex) {
+      button.addEventListener("click", () => {
+        setCurrentPage(pageIndex);
+      });
+    }
+  });
 });

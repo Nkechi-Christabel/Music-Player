@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,6 +24,7 @@
           <img src="./images/dancing.gif" alt="Dancing Gif" />
         </div>
       </section>
+
       <section class="input__section">
         <p>Want to hear something cool? <span class="emoji">👇</span></p>
         <form>
@@ -34,7 +34,7 @@
       </section>
       <section class="songs hide">
         <h1>Select a song</h1>
-        <div class="songs__wrapper">
+        <div class="songs__wrapper paginated-list">
           <div class="song" data-name="dean">
             <span class="song-name">Waves</span>
             <span class="artist">Dean Lewis</span>
@@ -61,6 +61,27 @@
             <span class="artist">Tones & I</span>
             <span class="download"
               ><a href="./music/Tones-and-I-Dance-Monkey.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <div class="audio-mute">
+              <span class="hide mute"><i class="fas fa-volume-mute"></i></span>
+              <span class="hide volume"><i class="fas fa-volume-up"></i></span>
+            </div>
+            <div class="playPause">
+              <span class="play hide"><i class="fas fa-play"></i></span>
+              <span class="pause hide"><i class="fas fa-pause"></i></span>
+            </div>
+            <div class="time-wrapper">
+              <span class="curTime">00:00</span><span class="slash">/</span>
+              <span class="durTime">00:00</span>
+            </div>
+          </div>
+          <div class="song" data-name="beautiful-rain">
+            <span class="song-name">Beautiful Rain</span>
+            <span class="artist">The Caveman</span>
+            <span class="download"
+              ><a href="./music/The_Cavemen_Beautiful_Rain.mp3" download
                 >Click to download</a
               ></span
             >
@@ -123,6 +144,7 @@
               <span class="durTime">00:00</span>
             </div>
           </div>
+
           <div class="song" data-name="wizkid">
             <span class="song-name">Essence</span>
             <span class="artist">Wizkid</span>
@@ -151,6 +173,27 @@
               ><a
                 href="./music/Chicco_ft_Mellow_Sleazy_-_Nkao_Tempela.mp3"
                 download
+                >Click to download</a
+              ></span
+            >
+            <div class="audio-mute">
+              <span class="hide mute"><i class="fas fa-volume-mute"></i></span>
+              <span class="hide volume"><i class="fas fa-volume-up"></i></span>
+            </div>
+            <div class="playPause">
+              <span class="play hide"><i class="fas fa-play"></i></span>
+              <span class="pause hide"><i class="fas fa-pause"></i></span>
+            </div>
+            <div class="time-wrapper">
+              <span class="curTime">00:00</span><span class="slash">/</span>
+              <span class="durTime">00:00</span>
+            </div>
+          </div>
+          <div class="song" data-name="waves">
+            <span class="song-name">Waves</span>
+            <span class="artist">Dotan</span>
+            <span
+              ><a href="./music/Dotan-Waves.mp3" download
                 >Click to download</a
               ></span
             >
@@ -210,6 +253,27 @@
               <span class="durTime">00:00</span>
             </div>
           </div>
+          <div class="song" data-name="door-open">
+            <span class="song-name">Leave The Door Open</span>
+            <span class="artist">Bruno Mars</span>
+            <span class="download"
+              ><a href="./music/Bruno-Mars-Leave-The-Door-Open.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <div class="audio-mute">
+              <span class="hide mute"><i class="fas fa-volume-mute"></i></span>
+              <span class="hide volume"><i class="fas fa-volume-up"></i></span>
+            </div>
+            <div class="playPause">
+              <span class="play hide"><i class="fas fa-play"></i></span>
+              <span class="pause hide"><i class="fas fa-pause"></i></span>
+            </div>
+            <div class="time-wrapper">
+              <span class="curTime">00:00</span><span class="slash">/</span>
+              <span class="durTime">00:00</span>
+            </div>
+          </div>
           <div class="song" data-name="davido">
             <span class="song-name">Holy Ground</span>
             <span class="artist">Davido</span>
@@ -231,6 +295,28 @@
               <span class="durTime">00:00</span>
             </div>
           </div>
+          <div class="song" data-name="home">
+            <span class="song-name">Home</span>
+            <span class="artist">Dotan</span>
+            <span
+              ><a href="./music/Dotan-Home.mp3" download
+                >Click to download</a
+              ></span
+            >
+            <div class="audio-mute">
+              <span class="hide mute"><i class="fas fa-volume-mute"></i></span>
+              <span class="hide volume"><i class="fas fa-volume-up"></i></span>
+            </div>
+            <div class="playPause">
+              <span class="play hide"><i class="fas fa-play"></i></span>
+              <span class="pause hide"><i class="fas fa-pause"></i></span>
+            </div>
+            <div class="time-wrapper">
+              <span class="curTime">00:00</span><span class="slash">/</span>
+              <span class="durTime">00:00</span>
+            </div>
+          </div>
+
           <div class="song" data-name="heize">
             <span class="song-name">Round and Round</span>
             <span class="artist">Heize Han</span>
@@ -258,7 +344,7 @@
             <span class="song-name">Hellium</span>
             <span class="artist">Sia</span>
             <span class="download"
-              ><a href="./music/Sia-Helium-via-Naijafinix.com_.mp3" download
+              ><a href="./music/Sia-Hellium.mp3" download
                 >Click to download</a
               ></span
             >
@@ -299,6 +385,29 @@
             </div>
           </div>
         </div>
+        <section class="pagination_section">
+          <nav class="pagination-container">
+            <button
+              class="pagination-button"
+              id="prev-button"
+              aria-label="Previous page"
+              title="Previous page"
+            >
+              &lt;
+            </button>
+
+            <div id="pagination-numbers"></div>
+
+            <button
+              class="pagination-button"
+              id="next-button"
+              aria-label="Next page"
+              title="Next page"
+            >
+              &gt;
+            </button>
+          </nav>
+        </section>
       </section>
     </main>
 
@@ -307,6 +416,14 @@
     <audio
       data-name="billie"
       src="./music/Billie-Eilish-Ocean-Eyes-via-Naijafinix.com_.mp3"
+    ></audio>
+    <audio
+      data-name="beautiful-rain"
+      src="./music/The_Cavemen_Beautiful_Rain.mp3"
+    ></audio>
+    <audio
+      data-name="door-open"
+      src="./music/Bruno-Mars-Leave-The-Door-Open.mp3"
     ></audio>
     <audio
       data-name="wizkid"
@@ -321,14 +438,13 @@
       data-name="davido"
       src="./music/Davido-Holy-Ground-ft.-Nicki-Minaj.mp3"
     ></audio>
+    <audio data-name="home" src="./music/Dotan-Home.mp3"></audio>
+    <audio data-name="waves" src="./music/Dotan-Waves.mp3"></audio>
     <audio
       data-name="heize"
-      src="./music/Heize Han Soo Ji - Round And Round (OST Goblin Part.14).mp3"
+      src="/music/Heize Han Soo Ji - Round And Round (OST Goblin Part.14).mp3"
     ></audio>
-    <audio
-      data-name="sia"
-      src="./music/Sia-Helium-via-Naijafinix.com_.mp3"
-    ></audio>
+    <audio data-name="sia" src="./music/Sia-Helium.mp3"></audio>
     <audio
       data-name="duncan"
       src="./music/Duncan-Laurence-Arcade-ft.-FLETCHER_OpraDre.com_.mp3"
